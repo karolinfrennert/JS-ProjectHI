@@ -1,0 +1,62 @@
+:root {
+
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  /* colors */
+  --black: #222;
+  --white: #ffffff;
+  --red: #DE6B48;
+  --orange: #E5B181;
+
+
+  /* style elements*/
+  --background: var(--white);
+  --heading-text: var(--black);
+  --heading-background: var(--orange);
+
+  /*font type*/
+  --text-font: ;
+  --nav-font: ;
+
+  /* font sizes defined*/
+  --nav-bar: 2rem;
+  
+}
+
+body {
+  background-color: var(--background);
+  color: var(--heading-text);
+}
+
+a {
+  text-decoration: none;
+  color: var(--heading-text);
+}
+
+a:hover {
+  
+  text-shadow: var(--black);
+}
+
+.logo {
+  text-align: center;
+}
+
+.addFoodHeading {
+  padding: 2rem;;
+  text-align: center;
+  background: var(--heading-background)
+  
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+
