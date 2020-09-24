@@ -1,35 +1,64 @@
-:root {
-
-
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
 
+:root {
+  
   /* colors */
   --black: #222;
-  --white: #ffffff;
-  --red: #DE6B48;
-  --orange: #E5B181;
+  --white: #faf9f9;
+  --red: #d86948;
+  --orange: #fcd7be;
+  --light-blue: #bee3db;
+  --middle-blue: #89b0ae;
+  --dark-blue: #555b6e;
 
 
   /* style elements*/
   --background: var(--white);
-  --heading-text: var(--black);
+  --heading-text: var(--red);
   --heading-background: var(--orange);
+  --list-background: var(--middle-blue);
+
+  /*Heights*/
+  --body-height: 100vh;
+
+  /*Padding*/
+  --logo-padding: 2rem;
 
   /*font type*/
-  --text-font: ;
-  --nav-font: ;
+  --heading-font: 'Pacifico', cursive; 
+  --general-font: 'Open Sans', sans-serif; 
 
   /* font sizes defined*/
+  --heading-size: 3rem;
   --nav-bar: 2rem;
+
+
   
 }
 
 body {
   background-color: var(--background);
   color: var(--heading-text);
+  font-family: var(--general-font);
+  height: var(--body-height);
 }
+
+form button {
+
+  color: var(--black);
+  padding: 0.2rem;
+  cursor: pointer;
+  transition: all 0.3 ease;
+}
+form button:hover {
+  background: var(--orange);
+  color: var(--black);
+}
+
 
 a {
   text-decoration: none;
@@ -37,25 +66,39 @@ a {
 }
 
 a:hover {
-  
   text-shadow: var(--black);
 }
 
 .logo {
+  font-family: var(--heading-font);
+  font-size: var(--heading-size) ;
+  padding: var(--logo-padding);
+  font-weight: 200;
   text-align: center;
+
+}
+.grocery-h2 {
+  padding-bottom: var(--logo-padding);
+}
+.groceryList {
+  background: var(--list-background);
 }
 
-.addFoodHeading {
-  padding: 2rem;;
+.add-food-input {
+  padding: 0.2rem;
+}
+
+.add-grocery-heading {
+  padding: 2rem;
   text-align: center;
+  color: var(--heading-text);
   background: var(--heading-background)
   
 }
-
 .flex {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: baseline;
 }
 

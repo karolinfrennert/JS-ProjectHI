@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My JS project</title>
   <link href="style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Pacifico&display=swap" rel="stylesheet">
   <script href="script.js"></script>
 
 </head>
@@ -19,14 +20,21 @@
 
   <main>
 
-    <h1 class="logo">Let's get some groceries!</h1>
+    <h1 class="logo">Let's get groceries!</h1>
 
-    <div class="addFoodHeading">
-      <h2>What do we need to buy?</h2>
-      <input type="text" id="newItem" placeholder="Add your item">
-      <span> Add to list </span>
+    <section class="add-grocery-heading">
+      <h2 class="grocery-h2">What do we need to buy?</h2>
+      <form class="grocery-form flex">
+        <input type="text" class="add-food-input" placeholder="Add your item">
+        <button class="add-food-button" type="submit">Add</button>
+      </form>
+    </section>
 
-    </div>
+    <section class="grocery-container">
+      <ul class="grocery-list">
+      </ul>
+
+    </section>
 
   </main>
 
@@ -35,5 +43,7 @@
   </footer>
 
 </body>
+
+<script src="script.js"></script>
 
 </html>
