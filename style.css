@@ -34,10 +34,7 @@
 
   /* font sizes defined*/
   --heading-size: 3rem;
-  --nav-bar: 2rem;
-
-
-  
+  --nav-bar: 2rem; 
 }
 
 body {
@@ -77,11 +74,26 @@ a:hover {
   text-align: center;
 
 }
+
+.grocery-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .grocery-h2 {
   padding-bottom: var(--logo-padding);
 }
-.groceryList {
-  background: var(--list-background);
+.grocery-item {
+  list-style: none;
+  margin: 30%;
+ 
+}
+
+.grocery-list {
+  background: var(--white);
+  color: var(--black);
+  
 }
 
 .add-food-input {
