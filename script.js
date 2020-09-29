@@ -59,7 +59,7 @@ groceryDiv.classList.add("grocery-div");
 
   //add button to div
   groceryDiv.appendChild(trashButton);
-  groceryList.appendChild(groceryDiv);
+  groceryList.insertAdjacentElement('afterbegin', groceryDiv);
 
   //Clean up the inputfield
   groceryInput.value = "";
