@@ -4,6 +4,7 @@ const crossEmoji = "❌";
 const trashEmoji = "🗑️";
 
 
+
 // selectors
 const groceryInput = document.querySelector('.add-food-input');
 const groceryButton = document.querySelector('.add-food-button');
@@ -22,6 +23,7 @@ function addGrocery(event) {
 //error message for cleanup
 errorMessage.innerHTML = "";
 
+
  //New Div with grocery items
 const groceryDiv = document.createElement('div');
 groceryDiv.classList.add("grocery-div");
@@ -30,7 +32,7 @@ groceryDiv.classList.add("grocery-div");
 
   const newGroceyItem = document.createElement('li');
   const inputValue = groceryInput.value;
-  if (!inputValue) {
+    if (!inputValue) {
     errorMessage.innerHTML = "Please enter something";
     return;
   } 
@@ -58,6 +60,10 @@ groceryDiv.classList.add("grocery-div");
   //add button to div
   groceryDiv.appendChild(trashButton);
   groceryList.appendChild(groceryDiv);
+
+  //Clean up the inputfield
+  groceryInput.value = "";
+  
 }
 
 function trash() {
@@ -74,3 +80,4 @@ function taskStatus() {
     : this.innerText = crossEmoji;
 
 }
+
