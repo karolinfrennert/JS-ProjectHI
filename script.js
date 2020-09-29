@@ -22,12 +22,7 @@ function addGrocery(event) {
   
 //error message for cleanup
 errorMessage.innerHTML = "";
-
-
- //New Div with grocery items
-const groceryDiv = document.createElement('div');
-groceryDiv.classList.add("grocery-div");
-
+ 
 //New Li of the item + min input required
 
   const newGroceyItem = document.createElement('li');
@@ -37,19 +32,19 @@ groceryDiv.classList.add("grocery-div");
     return;
   } 
 
-  newGroceyItem.innerText = inputValue;
-  newGroceyItem.classList.add("grocery-item")
-  
-  //Add li to div
-  groceryDiv.appendChild(newGroceyItem);
+  //Create span to contain text of input
+  const itemName = document.createElement('span');
+
+  itemName.innerText = inputValue;   
+  newGroceyItem.appendChild(itemName);
 
   //Completed button
   const completedButton = document.createElement('button');
   completedButton.innerText = tickEmoji;
   completedButton.addEventListener('click',taskStatus);
 
-  //add button to div
-  groceryDiv.appendChild(completedButton);
+  //add button to li
+  newGroceyItem.appendChild(completedButton);
 
   //Trash button
   const trashButton = document.createElement('button');
@@ -57,9 +52,9 @@ groceryDiv.classList.add("grocery-div");
   trashButton.classList.add("trash-button");
   trashButton.addEventListener('click', trash);
 
-  //add button to div
-  groceryDiv.appendChild(trashButton);
-  groceryList.insertAdjacentElement('afterbegin', groceryDiv);
+  //add button to li
+  newGroceyItem.appendChild(trashButton);
+  groceryList.insertAdjacentElement('afterbegin', newGroceyItem);
 
   //Clean up the inputfield
   groceryInput.value = "";
@@ -68,7 +63,7 @@ groceryDiv.classList.add("grocery-div");
 
 function trash() {
   this.removeEventListener('click', trash);
-  const wrapper = this.closest(".grocery-div");
+  const wrapper = this.closest("li");
   wrapper.remove();
 };
 
@@ -78,6 +73,8 @@ function taskStatus() {
   buttonText === crossEmoji 
     ? this.innerText = tickEmoji
     : this.innerText = crossEmoji;
+
+    this.closest("li").classList.toggle("strikeThrough");
 
 }
 

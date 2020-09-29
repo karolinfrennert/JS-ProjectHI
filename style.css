@@ -45,17 +45,15 @@ body {
 }
 
 form button {
-
   color: var(--black);
   padding: 0.2rem;
   cursor: pointer;
-  transition: all 0.3 ease;
+  transition: all 0.3s ease;
 }
 form button:hover {
   background: var(--orange);
   color: var(--black);
 }
-
 
 a {
   text-decoration: none;
@@ -64,6 +62,28 @@ a {
 
 a:hover {
   text-shadow: var(--black);
+}
+
+button {
+  margin: 0.2rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.grocery-list li {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  width: 25rem;
+  background: orange;
+  list-style: none;
+  margin: 1rem;
+}
+
+.grocery-list span {
+  padding-left: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .logo {
@@ -79,25 +99,29 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: var(--heading-text);
 }
+
+
+
+.grocery-item {
+  padding: 1rem;
+  
+}
+
 
 .grocery-h2 {
   padding-bottom: var(--logo-padding);
 }
-.grocery-item {
-  list-style: none;
-  margin: 30%;
- 
-}
+
 
 .grocery-list {
-  background: var(--white);
-  color: var(--black);
-  
+   color: var(--black);  
 }
 
 .add-food-input {
   padding: 0.2rem;
+  height: 2rem;
 }
 
 .add-grocery-heading {
@@ -107,6 +131,11 @@ a:hover {
   background: var(--heading-background)
   
 }
+
+.strikeThrough span{
+  text-decoration: line-through;
+}
+
 .flex {
   display: flex;
   flex-wrap: wrap;
