@@ -10,7 +10,7 @@
   --black: #222;
   --white: #faf9f9;
   --red: #d86948;
-  --orange: #fcd7be;
+  --orange: rgb(252 215 190 / 0.9);
   --light-blue: #bee3db;
   --middle-blue: #89b0ae;
   --dark-blue: #555b6e;
@@ -33,7 +33,7 @@
   --general-font: 'Open Sans', sans-serif; 
 
   /* font sizes defined*/
-  --heading-size: 3rem;
+  --heading-size: 4rem;
   --nav-bar: 2rem; 
 }
 
@@ -42,6 +42,14 @@ body {
   color: var(--heading-text);
   font-family: var(--general-font);
   height: var(--body-height);
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 10%, transparent, transparent), url("./images/groceries.jpg");
+  backdrop-filter: blur(4px);
+  
+}
+
+main {
+  width: 34rem;
+  margin: 0 auto;
 }
 
 form button {
@@ -49,6 +57,8 @@ form button {
   padding: 0.2rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  height: 2.5rem;
+  width: 2.5rem;
 }
 form button:hover {
   background: var(--orange);
@@ -64,7 +74,7 @@ a:hover {
   text-shadow: var(--black);
 }
 
-button {
+li button {
   margin: 0.2rem;
   width: 2rem;
   height: 2rem;
@@ -73,11 +83,14 @@ button {
 .grocery-list li {
   display: grid;
   grid-template-columns: 1fr auto auto;
+  border-radius: 1px;
   align-items: center;
   width: 25rem;
-  background: orange;
+  background: rgba(216,105, 72, 0.6);
   list-style: none;
   margin: 1rem;
+  color: var(--black);
+  
 }
 
 .grocery-list span {
@@ -86,27 +99,30 @@ button {
   text-overflow: ellipsis;
 }
 
+
+.grocery-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+ 
+}
+
 .logo {
   font-family: var(--heading-font);
   font-size: var(--heading-size) ;
   padding: var(--logo-padding);
   font-weight: 200;
   text-align: center;
-
+  text-shadow: -3px 3px rgba(255, 255, 255, 0.8);
 }
+
+
 
 .grocery-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--heading-text);
-}
-
-
-
-.grocery-item {
-  padding: 1rem;
-  
+  background: var(--heading-background);
 }
 
 
@@ -114,33 +130,32 @@ button {
   padding-bottom: var(--logo-padding);
 }
 
-
-.grocery-list {
-   color: var(--black);  
-}
-
 .add-food-input {
-  padding: 0.2rem;
-  height: 2rem;
+  height: 2.5rem;
+  width: 25rem;
+  padding-left: 0.75rem;
+  
 }
 
 .add-grocery-heading {
   padding: 2rem;
   text-align: center;
   color: var(--heading-text);
-  background: var(--heading-background)
+  background: var(--heading-background);
+  border-radius: 1px;
   
 }
 
 .strikeThrough span{
   text-decoration: line-through;
+  color: rgba(34, 34, 34, 0.4);
+  
 }
 
-.flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: baseline;
+.error {
+  padding: 1rem;
 }
+
+
 
 
