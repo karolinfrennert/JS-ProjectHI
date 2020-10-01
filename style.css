@@ -68,6 +68,9 @@ form button:hover {
 a {
   text-decoration: none;
   color: var(--heading-text);
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-shadow: -1px 1px rgba(255, 255, 255, 0.8);
 }
 
 a:hover {
